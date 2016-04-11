@@ -1,0 +1,81 @@
+<resources>
+    <string name="app_name">Leaving Cert Calculater</string>
+    <string name="action_settings">Settings</string>
+    <string-array name="Level">
+        <item>Select Grade</item>
+        <item>Distinction</item>
+        <item>Merit</item>
+        <item>Pass</item>
+    </string-array>
+    <string-array name="Grade">
+        <item>Select Grade</item>
+        <item>A1</item>
+        <item>A2</item>
+        <item>B1</item>
+        <item>B2</item>
+        <item>B3</item>
+        <item>C1</item>
+        <item>C2</item>
+        <item>C3</item>
+        <item>D1</item>
+        <item>D2</item>
+        <item>D3</item>
+    </string-array>
+    <string-array name="Subjects">
+        <item>Select Subject</item>
+        <item>Accounting</item>
+        <item>Agri Economics</item>
+        <item>Agri Science</item>
+        <item>Ancient Greek</item>
+        <item>Applied Maths</item>
+        <item>Arabic</item>
+        <item>Art</item>
+        <item>Biology</item>
+        <item>Bulgarian</item>
+        <item>Business</item>
+        <item>Chemistry</item>
+        <item>Classical Studies</item>
+        <item>Con Studies</item>
+        <item>Croatian</item>
+        <item>Czech</item>
+        <item>Danish</item>
+        <item>D&amp;CG</item>
+        <item>Dutch</item>
+        <item>Economics</item>
+        <item>Engineering</item>
+        <item>English</item>
+        <item>Estrnian</item>
+        <item>Finnish</item>
+        <item>French</item>
+        <item>Geography</item>
+        <item>Greman</item>
+        <item>Hebrew Studies</item>
+        <item>History</item>
+        <item>Home Economics</item>
+        <item>Hungarian</item>
+        <item>Irish</item>
+        <item>Italian</item>
+        <item>Japanese</item>
+        <item>Latin</item>
+        <item>Latvian</item>
+        <item>L.C.V.P</item>
+        <item>Lithuanian</item>
+        <item>Mathematics</item>
+        <item>Modern Greek</item>
+        <item>Music</item>
+        <item>Physics</item>
+        <item>Physics &amp; Chemistry</item>
+        <item>Polish</item>
+        <item>Portuguese</item>
+        <item>Religious Edu</item>
+        <item>Romanian</item>
+        <item>Russian</item>
+        <item>Slovakian</item>
+        <item>Spanish</item>
+        <item>Swedish</item>
+        <item>Technology</item>
+    </string-array>
+    <string name="title_activity_level">LevelActivity</string>
+    <string name="title_activity_grade">GradeActivity</string>
+    <string name="title_activity_result">ResultActivity</string>
+</resources>
