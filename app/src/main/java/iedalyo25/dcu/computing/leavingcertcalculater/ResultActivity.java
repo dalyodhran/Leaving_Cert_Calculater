@@ -11,6 +11,10 @@ public class ResultActivity extends AppCompatActivity {
 
     Bundle userSel;
 
+    String userSel1, userSel2, userSel3, userSel4, userSel5, userSel6;
+    String userGrade1, userGrade2, userGrade3, userGrade4, userGrade5, userGrade6;
+    String userLevel1, userLevel2, userLevel3, userLevel4, userLevel5, userLevel6;
+
     TextView tvResult;
 
     @Override
@@ -19,18 +23,426 @@ public class ResultActivity extends AppCompatActivity {
         setContentView(R.layout.activity_result);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        tvResult = (TextView)findViewById(R.id.tvResult);
+        setViews();
 
+        String [] higher = new String[6];
+        String [] ordinary = new String[6];
+        String [] found = new String[6];
+        String [] lcvp = new String[6];
+
+        fillHiArrays(higher);
+        fillOrdArray(ordinary);
+        fillFoundArray(found);
+        fillLcvpArray(lcvp);
+
+        int answer = 0;
+        answer += hiScore(higher);
+        answer += odScore(ordinary);
+        answer += foScore(found);
+        answer += lScore(lcvp);
+
+        if(isMaths()){
+            answer += 25;
+        }
+
+        String a = Integer.toString(answer);
+
+        tvResult.setText(a);
+    }
+
+    public boolean isMaths(){
+        userSel = getIntent().getExtras();
+        if(userSel == null) {
+
+        }
+            userSel1 = userSel.getString("userSubSel1");
+            userSel2 = userSel.getString("userSubSel2");
+            userSel3 = userSel.getString("userSubSel3");
+            userSel4 = userSel.getString("userSubSel4");
+            userSel5 = userSel.getString("userSubSel5");
+            userSel6 = userSel.getString("userSubSel6");
+
+            userLevel1 = userSel.getString("userSelLevel1");
+            userLevel2 = userSel.getString("userSelLevel2");
+            userLevel3 = userSel.getString("userSelLevel3");
+            userLevel4 = userSel.getString("userSelLevel4");
+            userLevel5 = userSel.getString("userSelLevel5");
+            userLevel6 = userSel.getString("userSelLevel6");
+
+            boolean isMaths = false;
+
+            if (userSel1.equals("Mathematics") && userLevel1.equals("Higher")) {
+                isMaths = true;
+            }
+            if (userSel2.equals("Mathematics") && userLevel2.equals("Higher")) {
+                isMaths = true;
+            }
+            if (userSel3.equals("Mathematics") && userLevel3.equals("Higher")) {
+                isMaths = true;
+            }
+            if (userSel4.equals("Mathematics") && userLevel4.equals("Higher")) {
+                isMaths = true;
+            }
+            if (userSel5.equals("Mathematics") && userLevel5.equals("Higher")) {
+                isMaths = true;
+            }
+            if (userSel6.equals("Mathematics") && userLevel6.equals("Higher")) {
+                isMaths = true;
+            }
+        return isMaths;
+    }
+
+    public int lScore(String [] lcvp){
+        int sum = 0;
+        for(int i = 0; i < lcvp.length; i++){
+            String a = lcvp[i];
+            if(a != null) {
+                switch (a) {
+                    case "Distinction":
+                        sum += 70;
+                        break;
+                    case "Merit":
+                        sum += 50;
+                        break;
+                    case "Pass":
+                        sum += 30;
+                        break;
+                    default:
+                        sum += 0;
+                }
+            }
+        }
+        return sum;
+    }
+
+    public int foScore(String [] found){
+        int sum = 0;
+        for(int i = 0; i < found.length; i++){
+            String a = found[i];
+            if(a != null) {
+                switch (a) {
+                    case "A1":
+                        sum += 20;
+                        break;
+                    case "A2":
+                        sum += 15;
+                        break;
+                    case "B1":
+                        sum += 10;
+                        break;
+                    case "B2":
+                        sum += 5;
+                        break;
+                    default:
+                        sum += 0;
+                }
+            }
+        }
+        return sum;
+    }
+
+    public int odScore(String [] ordinary){
+        int sum = 0;
+
+        for(int i = 0; i < ordinary.length; i++) {
+            String a = ordinary[i];
+            if(a != null){
+                switch (a) {
+                    case "A1":
+                        sum += 60;
+                        break;
+                    case "A2":
+                        sum += 50;
+                        break;
+                    case "B1":
+                        sum += 45;
+                        break;
+                    case "B2":
+                        sum += 40;
+                        break;
+                    case "B3":
+                        sum += 35;
+                        break;
+                    case "C1":
+                        sum += 30;
+                        break;
+                    case "C2":
+                        sum += 25;
+                        break;
+                    case "C3":
+                        sum += 20;
+                        break;
+                    case "D1":
+                        sum += 15;
+                        break;
+                    case "D2":
+                        sum += 10;
+                        break;
+                    case "D3":
+                        sum += 5;
+                        break;
+                    default:
+                        sum += 0;
+                }
+            }
+        }
+        return sum;
+    }
+
+    public int hiScore(String [] hi){
+        int sum = 0;
+
+        for(int i = 0; i < hi.length; i++){
+            String a = hi[i];
+            if(a != null){
+                switch (a) {
+                    case "A1":
+                        sum += 100;
+                        break;
+                    case "A2":
+                        sum += 90;
+                        break;
+                    case "B1":
+                        sum += 85;
+                        break;
+                    case "B2":
+                        sum += 80;
+                        break;
+                    case "B3":
+                        sum += 75;
+                        break;
+                    case "C1":
+                        sum += 70;
+                        break;
+                    case "C2":
+                        sum += 65;
+                        break;
+                    case "C3":
+                        sum += 60;
+                        break;
+                    case "D1":
+                        sum += 55;
+                        break;
+                    case "D2":
+                        sum += 50;
+                        break;
+                    case "D3":
+                        sum += 45;
+                        break;
+                    default:
+                        sum += 40;
+                }
+            }
+        }
+        return sum;
+    }
+
+    public String [] fillLcvpArray(String [] l){
+        userSel = getIntent().getExtras();
+        if(userSel == null){
+            userSel = null;
+        }
+
+        userLevel1 = userSel.getString("userSelLevel1");
+        userLevel2 = userSel.getString("userSelLevel2");
+        userLevel3 = userSel.getString("userSelLevel3");
+        userLevel4 = userSel.getString("userSelLevel4");
+        userLevel5 = userSel.getString("userSelLevel5");
+        userLevel6 = userSel.getString("userSelLevel6");
+
+        userGrade1 = userSel.getString("userSelGrade1");
+        userGrade2 = userSel.getString("userSelGrade2");
+        userGrade3 = userSel.getString("userSelGrade3");
+        userGrade4 = userSel.getString("userSelGrade4");
+        userGrade5 = userSel.getString("userSelGrade5");
+        userGrade6 = userSel.getString("userSelGrade6");
+
+        int point = 0;
+
+        if(userLevel1.equals("L.C.V.P")){
+            l[point] = userGrade1;
+            point++;
+        }
+        if(userLevel2.equals("L.C.V.P")){
+            l[point] = userGrade2;
+            point++;
+        }
+        if(userLevel3.equals("L.C.V.P")){
+            l[point] = userGrade3;
+            point++;
+        }
+        if(userLevel4.equals("L.C.V.P")){
+            l[point] = userGrade4;
+            point++;
+        }
+        if(userLevel5.equals("L.C.V.P")){
+            l[point] = userGrade5;
+            point++;
+        }
+        if(userLevel6.equals("L.C.V.P")){
+            l[point] = userGrade6;
+        }
+        return l;
+    }
+
+    public String [] fillFoundArray(String [] fo){
+        userSel = getIntent().getExtras();
+        if(userSel == null){
+            userSel = null;
+        }
+
+        userLevel1 = userSel.getString("userSelLevel1");
+        userLevel2 = userSel.getString("userSelLevel2");
+        userLevel3 = userSel.getString("userSelLevel3");
+        userLevel4 = userSel.getString("userSelLevel4");
+        userLevel5 = userSel.getString("userSelLevel5");
+        userLevel6 = userSel.getString("userSelLevel6");
+
+        userGrade1 = userSel.getString("userSelGrade1");
+        userGrade2 = userSel.getString("userSelGrade2");
+        userGrade3 = userSel.getString("userSelGrade3");
+        userGrade4 = userSel.getString("userSelGrade4");
+        userGrade5 = userSel.getString("userSelGrade5");
+        userGrade6 = userSel.getString("userSelGrade6");
+
+        int point = 0;
+
+
+        if(userLevel1.equals("Found")){
+            fo[point] = userGrade1;
+            point++;
+        }
+        if(userLevel2.equals("Found")){
+            fo[point] = userGrade2;
+            point++;
+        }
+        if(userLevel3.equals("Found")){
+            fo[point] = userGrade3;
+            point++;
+        }
+        if(userLevel4.equals("Found")){
+            fo[point] = userGrade4;
+            point++;
+        }
+        if(userLevel5.equals("Found")){
+            fo[point] = userGrade5;
+            point++;
+        }
+        if(userLevel6.equals("Found")){
+            fo[point] = userGrade6;
+        }
+        return fo;
+    }
+
+    public String [] fillOrdArray(String [] ord){
+        userSel = getIntent().getExtras();
+        if(userSel == null){
+            userSel = null;
+        }
+
+        userLevel1 = userSel.getString("userSelLevel1");
+        userLevel2 = userSel.getString("userSelLevel2");
+        userLevel3 = userSel.getString("userSelLevel3");
+        userLevel4 = userSel.getString("userSelLevel4");
+        userLevel5 = userSel.getString("userSelLevel5");
+        userLevel6 = userSel.getString("userSelLevel6");
+
+        userGrade1 = userSel.getString("userSelGrade1");
+        userGrade2 = userSel.getString("userSelGrade2");
+        userGrade3 = userSel.getString("userSelGrade3");
+        userGrade4 = userSel.getString("userSelGrade4");
+        userGrade5 = userSel.getString("userSelGrade5");
+        userGrade6 = userSel.getString("userSelGrade6");
+
+        int point = 0;
+
+        if(userLevel1.equals("Ord")){
+            ord[point] = userGrade1;
+            point++;
+        }
+        if(userLevel2.equals("Ord")){
+            ord[point] = userGrade2;
+            point++;
+        }
+        if(userLevel3.equals("Ord")){
+            ord[point] = userGrade3;
+            point++;
+        }
+        if(userLevel4.equals("Ord")){
+            ord[point] = userGrade4;
+            point++;
+        }
+        if(userLevel5.equals("Ord")){
+            ord[point] = userGrade5;
+            point++;
+        }
+        if(userLevel6.equals("Ord")){
+            ord[point] = userGrade6;
+        }
+        return ord;
+    }
+
+    public String [] fillHiArrays(String [] hi){
+        userSel = getIntent().getExtras();
+        if(userSel == null){
+            return hi;
+        }
+
+        userLevel1 = userSel.getString("userSelLevel1");
+        userLevel2 = userSel.getString("userSelLevel2");
+        userLevel3 = userSel.getString("userSelLevel3");
+        userLevel4 = userSel.getString("userSelLevel4");
+        userLevel5 = userSel.getString("userSelLevel5");
+        userLevel6 = userSel.getString("userSelLevel6");
+
+        userGrade1 = userSel.getString("userSelGrade1");
+        userGrade2 = userSel.getString("userSelGrade2");
+        userGrade3 = userSel.getString("userSelGrade3");
+        userGrade4 = userSel.getString("userSelGrade4");
+        userGrade5 = userSel.getString("userSelGrade5");
+        userGrade6 = userSel.getString("userSelGrade6");
+
+        int point = 0;
+
+        if(userLevel1.equals("Higher")){
+            hi[point] = userGrade1;
+            point++;
+        }
+        if(userLevel2.equals("Higher")){
+            hi[point] = userGrade2;
+            point++;
+        }
+        if(userLevel3.equals("Higher")){
+            hi[point] = userGrade3;
+            point++;
+        }
+        if(userLevel4.equals("Higher")){
+            hi[point] = userGrade4;
+            point++;
+        }
+        if(userLevel5.equals("Higher")){
+            hi[point] = userGrade5;
+            point++;
+        }
+        if(userLevel6.equals("Higher")) {
+            hi[point] = userGrade6;
+        }
+        return hi;
+    }
+
+    public void setViews(){
         userSel = getIntent().getExtras();
         if(userSel == null){
             return;
         }
 
-        String userSel1 = userSel.getString("userSubSel1");
-        String userSel2 = userSel.getString("userSubSel2");
-        String userSel3 = userSel.getString("userSubSel3");
-        String userSel4 = userSel.getString("userSubSel4");
-        String userSel5 = userSel.getString("userSubSel5");
-        String userSel6 = userSel.getString("userSubSel6");
+        userSel1 = userSel.getString("userSubSel1");
+        userSel2 = userSel.getString("userSubSel2");
+        userSel3 = userSel.getString("userSubSel3");
+        userSel4 = userSel.getString("userSubSel4");
+        userSel5 = userSel.getString("userSubSel5");
+        userSel6 = userSel.getString("userSubSel6");
 
         final TextView userSubSel1 = (TextView)findViewById(R.id.tvSub1);
         final TextView userSubSel2 = (TextView)findViewById(R.id.tvSub2);
@@ -46,12 +458,12 @@ public class ResultActivity extends AppCompatActivity {
         userSubSel5.setText("5. " + userSel5);
         userSubSel6.setText("6. " + userSel6);
 
-        String userGrade1 = userSel.getString("userSelGrade1");
-        String userGrade2 = userSel.getString("userSelGrade2");
-        String userGrade3 = userSel.getString("userSelGrade3");
-        String userGrade4 = userSel.getString("userSelGrade4");
-        String userGrade5 = userSel.getString("userSelGrade5");
-        String userGrade6 = userSel.getString("userSelGrade6");
+        userGrade1 = userSel.getString("userSelGrade1");
+        userGrade2 = userSel.getString("userSelGrade2");
+        userGrade3 = userSel.getString("userSelGrade3");
+        userGrade4 = userSel.getString("userSelGrade4");
+        userGrade5 = userSel.getString("userSelGrade5");
+        userGrade6 = userSel.getString("userSelGrade6");
 
         final TextView userGradeSel1 = (TextView)findViewById(R.id.tvGrade1);
         final TextView userGradeSel2 = (TextView)findViewById(R.id.tvGrade2);
@@ -67,12 +479,12 @@ public class ResultActivity extends AppCompatActivity {
         userGradeSel5.setText(userGrade5);
         userGradeSel6.setText(userGrade6);
 
-        String userLevel1 = userSel.getString("userSelLevel1");
-        String userLevel2 = userSel.getString("userSelLevel2");
-        String userLevel3 = userSel.getString("userSelLevel3");
-        String userLevel4 = userSel.getString("userSelLevel4");
-        String userLevel5 = userSel.getString("userSelLevel5");
-        String userLevel6 = userSel.getString("userSelLevel6");
+        userLevel1 = userSel.getString("userSelLevel1");
+        userLevel2 = userSel.getString("userSelLevel2");
+        userLevel3 = userSel.getString("userSelLevel3");
+        userLevel4 = userSel.getString("userSelLevel4");
+        userLevel5 = userSel.getString("userSelLevel5");
+        userLevel6 = userSel.getString("userSelLevel6");
 
         final TextView userLevelSel1 = (TextView)findViewById(R.id.tvLevel1);
         final TextView userLevelSel2 = (TextView)findViewById(R.id.tvLevel2);
@@ -116,263 +528,5 @@ public class ResultActivity extends AppCompatActivity {
         }else {
             userLevelSel6.setText("----");
         }
-/**
-        String [] higher = new String[6];
-        String [] ordinary = new String[6];
-        String [] found = new String[6];
-        String [] lcvp = new String[6];
-
-        int ph = 0;
-        int po = 0;
-        int pf = 0;
-        int pl = 0;
-
-       if(!userSel1.equals("Select Subject")){
-            switch (userLevel1){
-                case "Higher":
-                    higher[ph] = userGrade1;
-                    ph++;
-                    break;
-                case "Ord":
-                    ordinary[po] = userGrade1;
-                    po++;
-                    break;
-                case "Found":
-                    found[pf] = userGrade1;
-                    pf++;
-                    break;
-                case "N/A":
-                    lcvp [pl] = userGrade1;
-                    pl++;
-                    break;
-            }
-        }
-
-        if(!userSel2.equals("Select Subject")){
-            switch (userLevel2){
-                case "Higher":
-                    higher[ph] = userGrade2;
-                    ph++;
-                    break;
-                case "Ord":
-                    ordinary[po] = userGrade2;
-                    po++;
-                    break;
-                case "Found":
-                    found[pf] = userGrade2;
-                    pf++;
-                    break;
-                case "N/A":
-                    lcvp [pl] = userGrade2;
-                    pl++;
-                    break;
-            }
-        }
-
-        if(!userSel3.equals("Select Subject")){
-            switch (userLevel3){
-                case "Higher":
-                    higher[ph] = userGrade3;
-                    ph++;
-                    break;
-                case "Ord":
-                    ordinary[po] = userGrade3;
-                    po++;
-                    break;
-                case "Found":
-                    found[pf] = userGrade3;
-                    pf++;
-                    break;
-                case "N/A":
-                    lcvp [pl] = userGrade3;
-                    pl++;
-                    break;
-            }
-        }
-
-        if(!userSel4.equals("Select Subject")){
-            switch (userLevel4){
-                case "Higher":
-                    higher[ph] = userGrade4;
-                    ph++;
-                    break;
-                case "Ord":
-                    ordinary[po] = userGrade4;
-                    po++;
-                    break;
-                case "Found":
-                    found[pf] = userGrade4;
-                    pf++;
-                    break;
-                case "N/A":
-                    lcvp [pl] = userGrade4;
-                    pl++;
-                    break;
-            }
-        }
-
-        if(!userSel5.equals("Select Subject")){
-            switch (userLevel5){
-                case "Higher":
-                    higher[ph] = userGrade5;
-                    ph++;
-                    break;
-                case "Ord":
-                    ordinary[po] = userGrade5;
-                    po++;
-                    break;
-                case "Found":
-                    found[pf] = userGrade5;
-                    pf++;
-                    break;
-                case "N/A":
-                    lcvp [pl] = userGrade5;
-                    pl++;
-                    break;
-            }
-        }
-
-        if(!userSel6.equals("Select Subject")){
-            switch (userLevel6){
-                case "Higher":
-                    higher[ph] = userGrade6;
-                    ph++;
-                    break;
-                case "Ord":
-                    ordinary[po] = userGrade6;
-                    po++;
-                    break;
-                case "Found":
-                    found[pf] = userGrade6;
-                    pf++;
-                    break;
-                case "N/A":
-                    lcvp [pl] = userGrade6;
-                    pl++;
-                    break;
-            }
-        }
-
-        for(int h = 0; h < higher.length; h++){
-            System.out.println(higher[h]);
-        }
-
-        int point1 = 0;
-        int point2 = 0;
-        int point3 = 0;
-        int point4 = 0;
-
-        for(int i = 0; i < higher.length; i++){
-            switch (higher[i]){
-                case "A1":
-                    point1 += 100;
-                    break;
-                case "A2":
-                    point1 += 90;
-                    break;
-                case "B1":
-                    point1 += 85;
-                    break;
-                case "B2":
-                    point1 += 80;
-                    break;
-                case "B3":
-                    point1 += 75;
-                    break;
-                case "C1":
-                    point1 += 70;
-                    break;
-                case "C2":
-                    point1 += 65;
-                    break;
-                case "C3":
-                    point1 += 60;
-                    break;
-                case "D1":
-                    point1 += 55;
-                    break;
-                case "D2":
-                    point1 += 50;
-                    break;
-                case "D3":
-                    point1 += 45;
-                    break;
-            }
-        }
-
-        for(int i = 0; i < ordinary.length; i++){
-            switch (ordinary[i]){
-                case "A1":
-                    point2 += 60;
-                    break;
-                case "A2":
-                    point2 += 50;
-                    break;
-                case "B1":
-                    point2 += 45;
-                    break;
-                case "B2":
-                    point2 += 40;
-                    break;
-                case "B3":
-                    point2 += 35;
-                    break;
-                case "C1":
-                    point2 += 30;
-                    break;
-                case "C2":
-                    point2 += 25;
-                    break;
-                case "C3":
-                    point2 += 20;
-                    break;
-                case "D1":
-                    point2 += 15;
-                    break;
-                case "D2":
-                    point2 += 10;
-                    break;
-                case "D3":
-                    point2 += 5;
-                    break;
-            }
-        }
-
-        for(int i = 0; i < found.length; i++){
-            switch (found[i]){
-                case "A1":
-                    point3 += 20;
-                    break;
-                case "A2":
-                    point3 += 15;
-                    break;
-                case "B1":
-                    point3 += 10;
-                    break;
-                case "B2":
-                    point3 += 5;
-                    break;
-            }
-        }
-
-        for(int i = 0; i < lcvp.length; i++){
-            switch (lcvp[i]){
-                case "Distinction":
-                    point4 += 70;
-                    break;
-                case "Merit":
-                    point4 += 50;
-                    break;
-                case "Pass":
-                    point4 += 30;
-                    break;
-            }
-        }
-
-        int answer = point1 + point2 + point3 + point4;
-
-        tvResult = (TextView)findViewById(R.id.tvResult);
-        tvResult.setText(answer);
-    }**/
     }
 }

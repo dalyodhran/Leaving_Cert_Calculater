@@ -24,187 +24,213 @@
             android:textStyle="bold"
             android:textSize="30dp" />
 
-        <TextView
+    <TextView
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="0"
             android:id="@+id/tvResult"
             android:gravity="center"
-            android:layout_marginTop="10dp" />
+            android:layout_marginTop="10dp"
+        android:textSize="50dp" />
 
-        <TextView
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="----"
-            android:id="@+id/tvGrade1"
-            android:gravity="right"
-            android:layout_marginRight="5dp"
-            android:textSize="20dp" />
+            android:layout_gravity="center_horizontal">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="1. Subject"
-            android:id="@+id/tvSub1"
-            android:layout_marginLeft="5dp"
-            android:textSize="25dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="----"
+                android:id="@+id/tvGrade1"
+                android:gravity="right"
+                android:layout_marginRight="5dp"
+                android:textSize="20dp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="----"
-            android:id="@+id/tvLevel1"
-            android:gravity="right"
-            android:layout_marginRight="5dp"
-            android:textSize="20dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="1. Subject"
+                android:id="@+id/tvSub1"
+                android:layout_marginLeft="5dp"
+                android:textSize="25dp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="----"
-            android:id="@+id/tvGrade2"
-            android:gravity="right"
-            android:layout_marginRight="5dp"
-            android:textSize="20dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="----"
+                android:id="@+id/tvLevel1"
+                android:gravity="right"
+                android:layout_marginRight="5dp"
+                android:textSize="20dp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="2. Subject"
-            android:id="@+id/tvSub2"
-            android:layout_marginLeft="5dp"
-            android:textSize="25dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="----"
+                android:id="@+id/tvGrade2"
+                android:gravity="right"
+                android:layout_marginRight="5dp"
+                android:textSize="20dp"
+                android:layout_marginTop="10dp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="----"
-            android:id="@+id/tvLevel2"
-            android:gravity="right"
-            android:layout_marginRight="5dp"
-            android:textSize="20dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="2. Subject"
+                android:id="@+id/tvSub2"
+                android:layout_marginLeft="5dp"
+                android:textSize="25dp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="----"
-            android:id="@+id/tvGrade3"
-            android:gravity="right"
-            android:layout_marginRight="5dp"
-            android:textSize="20dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="----"
+                android:id="@+id/tvLevel2"
+                android:gravity="right"
+                android:layout_marginRight="5dp"
+                android:textSize="20dp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="3. Subject"
-            android:id="@+id/tvSub3"
-            android:layout_marginLeft="5dp"
-            android:textSize="25dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="----"
+                android:id="@+id/tvGrade3"
+                android:gravity="right"
+                android:layout_marginRight="5dp"
+                android:textSize="20dp"
+                android:layout_marginTop="10dp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="----"
-            android:id="@+id/tvLevel3"
-            android:gravity="right"
-            android:layout_marginRight="5dp"
-            android:textSize="20dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="3. Subject"
+                android:id="@+id/tvSub3"
+                android:layout_marginLeft="5dp"
+                android:textSize="25dp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="----"
-            android:id="@+id/tvGrade4"
-            android:gravity="right"
-            android:layout_marginRight="5dp"
-            android:textSize="20dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="----"
+                android:id="@+id/tvLevel3"
+                android:gravity="right"
+                android:layout_marginRight="5dp"
+                android:textSize="20dp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="4. Subject"
-            android:id="@+id/tvSub4"
-            android:layout_marginLeft="5dp"
-            android:textSize="25dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="----"
+                android:id="@+id/tvGrade4"
+                android:gravity="right"
+                android:layout_marginRight="5dp"
+                android:textSize="20dp"
+                android:layout_marginTop="10dp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="----"
-            android:id="@+id/tvLevel4"
-            android:gravity="right"
-            android:layout_marginRight="5dp"
-            android:textSize="20dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="4. Subject"
+                android:id="@+id/tvSub4"
+                android:layout_marginLeft="5dp"
+                android:textSize="25dp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="----"
-            android:id="@+id/tvGrade5"
-            android:gravity="right"
-            android:layout_marginRight="5dp"
-            android:textSize="20dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="----"
+                android:id="@+id/tvLevel4"
+                android:gravity="right"
+                android:layout_marginRight="5dp"
+                android:textSize="20dp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="5. Subject"
-            android:id="@+id/tvSub5"
-            android:layout_marginLeft="5dp"
-            android:textSize="25dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="----"
+                android:id="@+id/tvGrade5"
+                android:gravity="right"
+                android:layout_marginRight="5dp"
+                android:textSize="20dp"
+                android:layout_marginTop="10dp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="----"
-            android:id="@+id/tvLevel5"
-            android:gravity="right"
-            android:layout_marginRight="5dp"
-            android:textSize="20dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="5. Subject"
+                android:id="@+id/tvSub5"
+                android:layout_marginLeft="5dp"
+                android:textSize="25dp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="----"
-            android:id="@+id/tvGrade6"
-            android:gravity="right"
-            android:layout_marginRight="5dp"
-            android:textSize="20dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="----"
+                android:id="@+id/tvLevel5"
+                android:gravity="right"
+                android:layout_marginRight="5dp"
+                android:textSize="20dp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="6. Subject"
-            android:id="@+id/tvSub6"
-            android:layout_marginLeft="5dp"
-            android:textSize="25dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="----"
+                android:id="@+id/tvGrade6"
+                android:gravity="right"
+                android:layout_marginRight="5dp"
+                android:textSize="20dp"
+                android:layout_marginTop="10dp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="----"
-            android:id="@+id/tvLevel6"
-            android:gravity="right"
-            android:layout_marginRight="5dp"
-            android:textSize="20dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="6. Subject"
+                android:id="@+id/tvSub6"
+                android:layout_marginLeft="5dp"
+                android:textSize="25dp" />
 
-    </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="----"
+                android:id="@+id/tvLevel6"
+                android:gravity="right"
+                android:layout_marginRight="5dp"
+                android:textSize="20dp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Reset"
+                android:id="@+id/btnReset"
+                android:layout_gravity="center_horizontal"
+                android:textSize="30dp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
