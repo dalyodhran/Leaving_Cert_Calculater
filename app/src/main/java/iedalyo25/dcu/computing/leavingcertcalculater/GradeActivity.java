@@ -12,7 +12,6 @@ import android.widget.TextView;
 public class GradeActivity extends AppCompatActivity {
 
     Bundle userSel;
-    private String [] lcvpArry;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,12 +39,19 @@ public class GradeActivity extends AppCompatActivity {
         final TextView userSubSel5 = (TextView)findViewById(R.id.tvSubG5);
         final TextView userSubSel6 = (TextView)findViewById(R.id.tvSubG6);
 
-        userSubSel1.setText("1. " + userSel1);
-        userSubSel2.setText("2. " + userSel2);
-        userSubSel3.setText("3. " + userSel3);
-        userSubSel4.setText("4. " + userSel4);
-        userSubSel5.setText("5. " + userSel5);
-        userSubSel6.setText("6. " + userSel6);
+        String sel1 = "1. " + userSel1;
+        String sel2 = "2. " + userSel2;
+        String sel3 = "3. " + userSel3;
+        String sel4 = "4. " + userSel4;
+        String sel5 = "5. " + userSel5;
+        String sel6 = "6. " + userSel6;
+
+        userSubSel1.setText(sel1);
+        userSubSel2.setText(sel2);
+        userSubSel3.setText(sel3);
+        userSubSel4.setText(sel4);
+        userSubSel5.setText(sel5);
+        userSubSel6.setText(sel6);
 
         Spinner spGrade1 = (Spinner)findViewById(R.id.spGrade1);
         Spinner spGrade2 = (Spinner)findViewById(R.id.spGrade2);
@@ -54,32 +60,34 @@ public class GradeActivity extends AppCompatActivity {
         Spinner spGrade5 = (Spinner)findViewById(R.id.spGrade5);
         Spinner spGrade6 = (Spinner)findViewById(R.id.spGrade6);
 
-        this.lcvpArry = new String[] {
+        String [] lcvpArray;
+
+        lcvpArray = new String[] {
                 "Select Grade", "Distinction", "Merit", "Pass"
         };
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, lcvpArry);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, lcvpArray);
 
-        if(userSel1.equals("L.C.V.P")){
+        if("L.C.V.P".equals(userSel1)){
             spGrade1.setAdapter(adapter);
         }
 
-        if(userSel2.equals("L.C.V.P")){
+        if("L.C.V.P".equals(userSel2)){
             spGrade2.setAdapter(adapter);
         }
 
-        if(userSel3.equals("L.C.V.P")){
+        if("L.C.V.P".equals(userSel3)){
             spGrade3.setAdapter(adapter);
         }
 
-        if(userSel4.equals("L.C.V.P")){
+        if("L.C.V.P".equals(userSel4)){
             spGrade4.setAdapter(adapter);
         }
 
-        if(userSel5.equals("L.C.V.P")){
+        if("L.C.V.P".equals(userSel5)){
             spGrade5.setAdapter(adapter);
         }
 
-        if(userSel6.equals("L.C.V.P")){
+        if("L.C.V.P".equals(userSel6)){
             spGrade6.setAdapter(adapter);
         }
     }

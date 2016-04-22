@@ -43,12 +43,19 @@ public class LevelActivity extends AppCompatActivity {
         final TextView userSubSel5 = (TextView)findViewById(R.id.tvSub5);
         final TextView userSubSel6 = (TextView)findViewById(R.id.tvSub6);
 
-        userSubSel1.setText("1. " + userSel);
-        userSubSel2.setText("2. " + userSe2);
-        userSubSel3.setText("3. " + userSe3);
-        userSubSel4.setText("4. " + userSe4);
-        userSubSel5.setText("5. " + userSe5);
-        userSubSel6.setText("6. " + userSe6);
+        String sel1 = "1. " + userSel;
+        String sel2 = "2. " + userSe2;
+        String sel3 = "3. " + userSe3;
+        String sel4 = "4. " + userSe4;
+        String sel5 = "5. " + userSe5;
+        String sel6 = "6. " + userSe6;
+
+        userSubSel1.setText(sel1);
+        userSubSel2.setText(sel2);
+        userSubSel3.setText(sel3);
+        userSubSel4.setText(sel4);
+        userSubSel5.setText(sel5);
+        userSubSel6.setText(sel6);
 
         buttonLogic();
 
@@ -93,12 +100,12 @@ public class LevelActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String userSel = subSelections.getString("userSubSel1");
-                if (!userSel.equals("Select Subject") && !userSel.equals("L.C.V.P")) {
+                if (!"Select Subject".equals(userSel) && !"L.C.V.P".equals(userSel)) {
                     int mod = count % 3;
                     if (mod == 0) {
                         btnLevel1.setBackgroundColor(Color.parseColor("#0080FF"));
                         btnLevel1.setTextColor(Color.WHITE);
-                        btnLevel1.setText("Higher");
+                        btnLevel1.setText(getString(R.string.Higher));
                         subLevel1 = "Higher";
                         count++;
                     }
@@ -106,7 +113,7 @@ public class LevelActivity extends AppCompatActivity {
                     if (mod == 1) {
                         btnLevel1.setBackgroundColor(Color.parseColor("#F6270D"));
                         btnLevel1.setTextColor(Color.WHITE);
-                        btnLevel1.setText("Ord");
+                        btnLevel1.setText(getString(R.string.Ord));
                         subLevel1 = "Ord";
                         count++;
                     }
@@ -114,7 +121,7 @@ public class LevelActivity extends AppCompatActivity {
                     if (mod == 2) {
                         btnLevel1.setBackgroundColor(Color.parseColor("#7F00FF"));
                         btnLevel1.setTextColor(Color.WHITE);
-                        btnLevel1.setText("Found");
+                        btnLevel1.setText(getString(R.string.Found));
                         subLevel1 = "Found";
                         count++;
                     }
@@ -131,12 +138,12 @@ public class LevelActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String userSel = subSelections.getString("userSubSel2");
-                if (!userSel.equals("Select Subject") && !userSel.equals("L.C.V.P")) {
+                if (!"Select Subject".equals(userSel) && !"L.C.V.P".equals(userSel)) {
                     int mod = count1 % 3;
                     if (mod == 0) {
                         btnLevel2.setBackgroundColor(Color.parseColor("#0080FF"));
                         btnLevel2.setTextColor(Color.WHITE);
-                        btnLevel2.setText("Higher");
+                        btnLevel2.setText(getString(R.string.Higher));
                         subLevel2 = "Higher";
                         count1++;
                     }
@@ -144,7 +151,7 @@ public class LevelActivity extends AppCompatActivity {
                     if (mod == 1) {
                         btnLevel2.setBackgroundColor(Color.parseColor("#F6270D"));
                         btnLevel2.setTextColor(Color.WHITE);
-                        btnLevel2.setText("Ord");
+                        btnLevel2.setText(getString(R.string.Ord));
                         subLevel2 = "Ord";
                         count1++;
                     }
@@ -152,7 +159,7 @@ public class LevelActivity extends AppCompatActivity {
                     if (mod == 2) {
                         btnLevel2.setBackgroundColor(Color.parseColor("#7F00FF"));
                         btnLevel2.setTextColor(Color.WHITE);
-                        btnLevel2.setText("Found");
+                        btnLevel2.setText(getString(R.string.Found));
                         subLevel2 = "Found";
                         count1++;
                     }
@@ -169,12 +176,12 @@ public class LevelActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String userSel = subSelections.getString("userSubSel3");
-                if (!userSel.equals("Select Subject") && !userSel.equals("L.C.V.P")) {
+                if (!"Select Subject".equals(userSel) && !"L.C.V.P".equals(userSel)) {
                     int mod = count2 % 3;
                     if (mod == 0) {
                         btnLevel3.setBackgroundColor(Color.parseColor("#0080FF"));
                         btnLevel3.setTextColor(Color.WHITE);
-                        btnLevel3.setText("Higher");
+                        btnLevel3.setText(getString(R.string.Higher));
                         subLevel3 = "Higher";
                         count2++;
                     }
@@ -182,7 +189,7 @@ public class LevelActivity extends AppCompatActivity {
                     if (mod == 1) {
                         btnLevel3.setBackgroundColor(Color.parseColor("#F6270D"));
                         btnLevel3.setTextColor(Color.WHITE);
-                        btnLevel3.setText("Ord");
+                        btnLevel3.setText(getString(R.string.Ord));
                         subLevel3 = "Ord";
                         count2++;
                     }
@@ -190,7 +197,7 @@ public class LevelActivity extends AppCompatActivity {
                     if (mod == 2) {
                         btnLevel3.setBackgroundColor(Color.parseColor("#7F00FF"));
                         btnLevel3.setTextColor(Color.WHITE);
-                        btnLevel3.setText("Found");
+                        btnLevel3.setText(getString(R.string.Found));
                         subLevel3 = "Found";
                         count2++;
                     }
@@ -207,12 +214,12 @@ public class LevelActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String userSel = subSelections.getString("userSubSel4");
-                if (!userSel.equals("Select Subject") && !userSel.equals("L.C.V.P")) {
+                if (!"Select Subject".equals(userSel) && !"L.C.V.P".equals(userSel)) {
                     int mod = count3 % 3;
                     if (mod == 0) {
                         btnLevel4.setBackgroundColor(Color.parseColor("#0080FF"));
                         btnLevel4.setTextColor(Color.WHITE);
-                        btnLevel4.setText("Higher");
+                        btnLevel4.setText(getString(R.string.Higher));
                         subLevel4 = "Higher";
                         count3++;
                     }
@@ -220,7 +227,7 @@ public class LevelActivity extends AppCompatActivity {
                     if (mod == 1) {
                         btnLevel4.setBackgroundColor(Color.parseColor("#F6270D"));
                         btnLevel4.setTextColor(Color.WHITE);
-                        btnLevel4.setText("Ord");
+                        btnLevel4.setText(getString(R.string.Ord));
                         subLevel4 = "Ord";
                         count3++;
                     }
@@ -228,7 +235,7 @@ public class LevelActivity extends AppCompatActivity {
                     if (mod == 2) {
                         btnLevel4.setBackgroundColor(Color.parseColor("#7F00FF"));
                         btnLevel4.setTextColor(Color.WHITE);
-                        btnLevel4.setText("Found");
+                        btnLevel4.setText(getString(R.string.Found));
                         subLevel4 = "Found";
                         count3++;
                     }
@@ -245,12 +252,12 @@ public class LevelActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String userSel = subSelections.getString("userSubSel5");
-                if (!userSel.equals("Select Subject") && !userSel.equals("L.C.V.P")) {
+                if (!"Select Subject".equals(userSel) && !"L.C.V.P".equals(userSel)) {
                     int mod = count4 % 3;
                     if (mod == 0) {
                         btnLevel5.setBackgroundColor(Color.parseColor("#0080FF"));
                         btnLevel5.setTextColor(Color.WHITE);
-                        btnLevel5.setText("Higher");
+                        btnLevel5.setText(getString(R.string.Higher));
                         subLevel5 = "Higher";
                         count4++;
                     }
@@ -258,7 +265,7 @@ public class LevelActivity extends AppCompatActivity {
                     if (mod == 1) {
                         btnLevel5.setBackgroundColor(Color.parseColor("#F6270D"));
                         btnLevel5.setTextColor(Color.WHITE);
-                        btnLevel5.setText("Ord");
+                        btnLevel5.setText(getString(R.string.Ord));
                         subLevel5 = "Ord";
                         count4++;
                     }
@@ -266,7 +273,7 @@ public class LevelActivity extends AppCompatActivity {
                     if (mod == 2) {
                         btnLevel5.setBackgroundColor(Color.parseColor("#7F00FF"));
                         btnLevel5.setTextColor(Color.WHITE);
-                        btnLevel5.setText("Found");
+                        btnLevel5.setText(getString(R.string.Found));
                         subLevel5 = "Found";
                         count4++;
                     }
@@ -283,12 +290,12 @@ public class LevelActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String userSel = subSelections.getString("userSubSel6");
-                if (!userSel.equals("Select Subject") && !userSel.equals("L.C.V.P")) {
+                if (!"Select Subject".equals(userSel) && !"L.C.V.P".equals(userSel)) {
                     int mod = count5 % 3;
                     if (mod == 0) {
                         btnLevel6.setBackgroundColor(Color.parseColor("#0080FF"));
                         btnLevel6.setTextColor(Color.WHITE);
-                        btnLevel6.setText("Higher");
+                        btnLevel6.setText(getString(R.string.Higher));
                         subLevel6 = "Higher";
                         count5++;
                     }
@@ -296,7 +303,7 @@ public class LevelActivity extends AppCompatActivity {
                     if (mod == 1) {
                         btnLevel6.setBackgroundColor(Color.parseColor("#F6270D"));
                         btnLevel6.setTextColor(Color.WHITE);
-                        btnLevel6.setText("Ord");
+                        btnLevel6.setText(getString(R.string.Ord));
                         subLevel6 = "Ord";
                         count5++;
                     }
@@ -304,7 +311,7 @@ public class LevelActivity extends AppCompatActivity {
                     if (mod == 2) {
                         btnLevel6.setBackgroundColor(Color.parseColor("#7F00FF"));
                         btnLevel6.setTextColor(Color.WHITE);
-                        btnLevel6.setText("Found");
+                        btnLevel6.setText(getString(R.string.Found));
                         subLevel6 = "Found";
                         count5++;
                     }

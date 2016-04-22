@@ -18,10 +18,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Enter Top 6 Subjects"
+        android:text="@string/tvSubInfo"
         android:id="@+id/tvSubInfo"
         android:gravity="center"
-        android:textSize="30dp"
+        android:textSize="30sp"
         android:textStyle="bold" />
 
     <Spinner
@@ -69,10 +69,10 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:text="Confirm"
+        android:text="@string/btnConSub"
         android:id="@+id/btnConSub"
         android:layout_gravity="center_horizontal"
-        android:textSize="30dp"
+        android:textSize="30sp"
         android:onClick="onClick"/>
 
 </LinearLayout>

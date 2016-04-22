@@ -1,10 +1,10 @@
 package iedalyo25.dcu.computing.leavingcertcalculater;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.Switch;
 import android.widget.TextView;
 
 public class ResultActivity extends AppCompatActivity {
@@ -51,45 +51,48 @@ public class ResultActivity extends AppCompatActivity {
         tvResult.setText(a);
     }
 
+    public void onClick(View view){
+        Intent i = new Intent(this, MainActivity.class);
+        this.startActivity(i);
+    }
+
     public boolean isMaths(){
         userSel = getIntent().getExtras();
-        if(userSel == null) {
 
+        userSel1 = userSel.getString("userSubSel1");
+        userSel2 = userSel.getString("userSubSel2");
+        userSel3 = userSel.getString("userSubSel3");
+        userSel4 = userSel.getString("userSubSel4");
+        userSel5 = userSel.getString("userSubSel5");
+        userSel6 = userSel.getString("userSubSel6");
+
+        userLevel1 = userSel.getString("userSelLevel1");
+        userLevel2 = userSel.getString("userSelLevel2");
+        userLevel3 = userSel.getString("userSelLevel3");
+        userLevel4 = userSel.getString("userSelLevel4");
+        userLevel5 = userSel.getString("userSelLevel5");
+        userLevel6 = userSel.getString("userSelLevel6");
+
+        boolean isMaths = false;
+
+        if ("Mathematics".equals(userSel1) && "Higher".equals(userLevel1)) {
+            isMaths = true;
         }
-            userSel1 = userSel.getString("userSubSel1");
-            userSel2 = userSel.getString("userSubSel2");
-            userSel3 = userSel.getString("userSubSel3");
-            userSel4 = userSel.getString("userSubSel4");
-            userSel5 = userSel.getString("userSubSel5");
-            userSel6 = userSel.getString("userSubSel6");
-
-            userLevel1 = userSel.getString("userSelLevel1");
-            userLevel2 = userSel.getString("userSelLevel2");
-            userLevel3 = userSel.getString("userSelLevel3");
-            userLevel4 = userSel.getString("userSelLevel4");
-            userLevel5 = userSel.getString("userSelLevel5");
-            userLevel6 = userSel.getString("userSelLevel6");
-
-            boolean isMaths = false;
-
-            if (userSel1.equals("Mathematics") && userLevel1.equals("Higher")) {
-                isMaths = true;
-            }
-            if (userSel2.equals("Mathematics") && userLevel2.equals("Higher")) {
-                isMaths = true;
-            }
-            if (userSel3.equals("Mathematics") && userLevel3.equals("Higher")) {
-                isMaths = true;
-            }
-            if (userSel4.equals("Mathematics") && userLevel4.equals("Higher")) {
-                isMaths = true;
-            }
-            if (userSel5.equals("Mathematics") && userLevel5.equals("Higher")) {
-                isMaths = true;
-            }
-            if (userSel6.equals("Mathematics") && userLevel6.equals("Higher")) {
-                isMaths = true;
-            }
+        if ("Mathematics".equals(userSel2) && "Higher".equals(userLevel2)) {
+            isMaths = true;
+        }
+        if ("Mathematics".equals(userSel3) && "Higher".equals(userLevel3)) {
+            isMaths = true;
+        }
+        if ("Mathematics".equals(userSel4) && "Higher".equals(userLevel4)) {
+            isMaths = true;
+        }
+        if ("Mathematics".equals(userSel5) && "Higher".equals(userLevel5)) {
+            isMaths = true;
+        }
+        if ("Mathematics".equals(userSel6) && "Higher".equals(userLevel6)) {
+            isMaths = true;
+        }
         return isMaths;
     }
 
@@ -192,7 +195,6 @@ public class ResultActivity extends AppCompatActivity {
 
     public int hiScore(String [] hi){
         int sum = 0;
-
         for(int i = 0; i < hi.length; i++){
             String a = hi[i];
             if(a != null){
@@ -231,7 +233,7 @@ public class ResultActivity extends AppCompatActivity {
                         sum += 45;
                         break;
                     default:
-                        sum += 40;
+                        sum += 0;
                 }
             }
         }
@@ -240,9 +242,6 @@ public class ResultActivity extends AppCompatActivity {
 
     public String [] fillLcvpArray(String [] l){
         userSel = getIntent().getExtras();
-        if(userSel == null){
-            userSel = null;
-        }
 
         userLevel1 = userSel.getString("userSelLevel1");
         userLevel2 = userSel.getString("userSelLevel2");
@@ -260,27 +259,27 @@ public class ResultActivity extends AppCompatActivity {
 
         int point = 0;
 
-        if(userLevel1.equals("L.C.V.P")){
+        if("L.C.V.P".equals(userLevel1)){
             l[point] = userGrade1;
             point++;
         }
-        if(userLevel2.equals("L.C.V.P")){
+        if("L.C.V.P".equals(userLevel2)){
             l[point] = userGrade2;
             point++;
         }
-        if(userLevel3.equals("L.C.V.P")){
+        if("L.C.V.P".equals(userLevel3)){
             l[point] = userGrade3;
             point++;
         }
-        if(userLevel4.equals("L.C.V.P")){
+        if("L.C.V.P".equals(userLevel4)){
             l[point] = userGrade4;
             point++;
         }
-        if(userLevel5.equals("L.C.V.P")){
+        if("L.C.V.P".equals(userLevel5)){
             l[point] = userGrade5;
             point++;
         }
-        if(userLevel6.equals("L.C.V.P")){
+        if("L.C.V.P".equals(userLevel6)){
             l[point] = userGrade6;
         }
         return l;
@@ -288,9 +287,6 @@ public class ResultActivity extends AppCompatActivity {
 
     public String [] fillFoundArray(String [] fo){
         userSel = getIntent().getExtras();
-        if(userSel == null){
-            userSel = null;
-        }
 
         userLevel1 = userSel.getString("userSelLevel1");
         userLevel2 = userSel.getString("userSelLevel2");
@@ -309,27 +305,27 @@ public class ResultActivity extends AppCompatActivity {
         int point = 0;
 
 
-        if(userLevel1.equals("Found")){
+        if("Found".equals(userLevel1)){
             fo[point] = userGrade1;
             point++;
         }
-        if(userLevel2.equals("Found")){
+        if("Found".equals(userLevel2)){
             fo[point] = userGrade2;
             point++;
         }
-        if(userLevel3.equals("Found")){
+        if("Found".equals(userLevel3)){
             fo[point] = userGrade3;
             point++;
         }
-        if(userLevel4.equals("Found")){
+        if("Found".equals(userLevel4)){
             fo[point] = userGrade4;
             point++;
         }
-        if(userLevel5.equals("Found")){
+        if("Found".equals(userLevel5)){
             fo[point] = userGrade5;
             point++;
         }
-        if(userLevel6.equals("Found")){
+        if("Found".equals(userLevel6)){
             fo[point] = userGrade6;
         }
         return fo;
@@ -337,9 +333,6 @@ public class ResultActivity extends AppCompatActivity {
 
     public String [] fillOrdArray(String [] ord){
         userSel = getIntent().getExtras();
-        if(userSel == null){
-            userSel = null;
-        }
 
         userLevel1 = userSel.getString("userSelLevel1");
         userLevel2 = userSel.getString("userSelLevel2");
@@ -357,27 +350,27 @@ public class ResultActivity extends AppCompatActivity {
 
         int point = 0;
 
-        if(userLevel1.equals("Ord")){
+        if("Ord".equals(userLevel1)){
             ord[point] = userGrade1;
             point++;
         }
-        if(userLevel2.equals("Ord")){
+        if("Ord".equals(userLevel2)){
             ord[point] = userGrade2;
             point++;
         }
-        if(userLevel3.equals("Ord")){
+        if("Ord".equals(userLevel3)){
             ord[point] = userGrade3;
             point++;
         }
-        if(userLevel4.equals("Ord")){
+        if("Ord".equals(userLevel4)){
             ord[point] = userGrade4;
             point++;
         }
-        if(userLevel5.equals("Ord")){
+        if("Ord".equals(userLevel5)){
             ord[point] = userGrade5;
             point++;
         }
-        if(userLevel6.equals("Ord")){
+        if("Ord".equals(userLevel6)){
             ord[point] = userGrade6;
         }
         return ord;
@@ -405,27 +398,27 @@ public class ResultActivity extends AppCompatActivity {
 
         int point = 0;
 
-        if(userLevel1.equals("Higher")){
+        if("Higher".equals(userLevel1)){
             hi[point] = userGrade1;
             point++;
         }
-        if(userLevel2.equals("Higher")){
+        if("Higher".equals(userLevel2)){
             hi[point] = userGrade2;
             point++;
         }
-        if(userLevel3.equals("Higher")){
+        if("Higher".equals(userLevel3)){
             hi[point] = userGrade3;
             point++;
         }
-        if(userLevel4.equals("Higher")){
+        if("Higher".equals(userLevel4)){
             hi[point] = userGrade4;
             point++;
         }
-        if(userLevel5.equals("Higher")){
+        if("Higher".equals(userLevel5)){
             hi[point] = userGrade5;
             point++;
         }
-        if(userLevel6.equals("Higher")) {
+        if("Higher".equals(userLevel6)) {
             hi[point] = userGrade6;
         }
         return hi;
@@ -433,9 +426,6 @@ public class ResultActivity extends AppCompatActivity {
 
     public void setViews(){
         userSel = getIntent().getExtras();
-        if(userSel == null){
-            return;
-        }
 
         userSel1 = userSel.getString("userSubSel1");
         userSel2 = userSel.getString("userSubSel2");
@@ -451,12 +441,19 @@ public class ResultActivity extends AppCompatActivity {
         final TextView userSubSel5 = (TextView)findViewById(R.id.tvSub5);
         final TextView userSubSel6 = (TextView)findViewById(R.id.tvSub6);
 
-        userSubSel1.setText("1. " + userSel1);
-        userSubSel2.setText("2. " + userSel2);
-        userSubSel3.setText("3. " + userSel3);
-        userSubSel4.setText("4. " + userSel4);
-        userSubSel5.setText("5. " + userSel5);
-        userSubSel6.setText("6. " + userSel6);
+        String sel1 = "1. " + userSel1;
+        String sel2 = "2. " + userSel2;
+        String sel3 = "3. " + userSel3;
+        String sel4 = "4. " + userSel4;
+        String sel5 = "5. " + userSel5;
+        String sel6 = "6. " + userSel6;
+
+        userSubSel1.setText(sel1);
+        userSubSel2.setText(sel2);
+        userSubSel3.setText(sel3);
+        userSubSel4.setText(sel4);
+        userSubSel5.setText(sel5);
+        userSubSel6.setText(sel6);
 
         userGrade1 = userSel.getString("userSelGrade1");
         userGrade2 = userSel.getString("userSelGrade2");
@@ -493,37 +490,37 @@ public class ResultActivity extends AppCompatActivity {
         final TextView userLevelSel5 = (TextView)findViewById(R.id.tvLevel5);
         final TextView userLevelSel6 = (TextView)findViewById(R.id.tvLevel6);
 
-        if(!userSel1.equals("L.C.V.P")){
+        if(!"L.C.V.P".equals(userSel1)){
             userLevelSel1.setText(userLevel1);
         }else {
             userLevelSel1.setText("----");
         }
 
-        if(!userSel2.equals("L.C.V.P")) {
+        if(!"L.C.V.P".equals(userSel2)) {
             userLevelSel2.setText(userLevel2);
         }else {
             userLevelSel2.setText("----");
         }
 
-        if(!userSel3.equals("L.C.V.P")) {
+        if(!"L.C.V.P".equals(userSel3)) {
             userLevelSel3.setText(userLevel3);
         }else {
             userLevelSel3.setText("----");
         }
 
-        if(!userSel4.equals("L.C.V.P")) {
+        if(!"L.C.V.P".equals(userSel4)) {
             userLevelSel4.setText(userLevel3);
         }else {
             userLevelSel4.setText(userLevel4);
         }
 
-        if(!userSel5.equals("L.C.V.P")) {
+        if(!"L.C.V.P".equals(userSel5)) {
             userLevelSel5.setText(userLevel5);
         }else {
             userLevelSel5.setText("----");
         }
 
-        if(!userSel6.equals("L.C.V.P")) {
+        if(!"L.C.V.P".equals(userSel6)) {
             userLevelSel6.setText(userLevel6);
         }else {
             userLevelSel6.setText("----");
