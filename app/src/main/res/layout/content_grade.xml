@@ -13,17 +13,6 @@
     tools:showIn="@layout/activity_grade"
     android:orientation="vertical">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/tvGraInfo"
-        android:id="@+id/tvGraInfo"
-        android:layout_gravity="center_horizontal"
-        android:gravity="center"
-        android:textStyle="bold"
-        android:textSize="30sp" />
-
     <TableRow
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

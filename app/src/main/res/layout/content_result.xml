@@ -13,17 +13,6 @@
     android:orientation="vertical"
     tools:showIn="@layout/activity_result">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="@string/tvResultInfo"
-            android:id="@+id/tvResultInfo"
-            android:layout_gravity="center_horizontal"
-            android:gravity="center"
-            android:textStyle="bold"
-            android:textSize="30sp" />
-
     <TextView
             android:layout_width="match_parent"
             android:layout_height="200dp"

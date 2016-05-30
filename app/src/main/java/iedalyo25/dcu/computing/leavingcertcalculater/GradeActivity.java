@@ -18,6 +18,7 @@ public class GradeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_grade);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle("Enter Grade");
         setSupportActionBar(toolbar);
 
         userSel = getIntent().getExtras();

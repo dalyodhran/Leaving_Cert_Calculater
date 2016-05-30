@@ -13,17 +13,6 @@
     tools:showIn="@layout/activity_level"
     android:orientation="vertical">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/textView"
-        android:id="@+id/textView"
-        android:layout_gravity="center_horizontal"
-        android:gravity="center"
-        android:textSize="30sp"
-        android:textStyle="bold" />
-
     <TableRow
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

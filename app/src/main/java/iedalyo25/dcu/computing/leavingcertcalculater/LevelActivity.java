@@ -22,6 +22,7 @@ public class LevelActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_level);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle("Enter Subject Level");
         setSupportActionBar(toolbar);
 
         subSelections = getIntent().getExtras();

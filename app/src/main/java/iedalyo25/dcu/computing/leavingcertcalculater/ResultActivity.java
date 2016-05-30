@@ -22,6 +22,7 @@ public class ResultActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle("Result");
         setSupportActionBar(toolbar);
         tvResult = (TextView)findViewById(R.id.tvResult);
         setViews();
@@ -98,10 +99,9 @@ public class ResultActivity extends AppCompatActivity {
 
     public int lScore(String [] lcvp){
         int sum = 0;
-        for(int i = 0; i < lcvp.length; i++){
-            String a = lcvp[i];
-            if(a != null) {
-                switch (a) {
+        for(String i : lcvp){
+            if(i != null) {
+                switch (i) {
                     case "Distinction":
                         sum += 70;
                         break;
@@ -121,10 +121,9 @@ public class ResultActivity extends AppCompatActivity {
 
     public int foScore(String [] found){
         int sum = 0;
-        for(int i = 0; i < found.length; i++){
-            String a = found[i];
-            if(a != null) {
-                switch (a) {
+        for(String i : found){
+            if(i != null) {
+                switch (i) {
                     case "A1":
                         sum += 20;
                         break;
@@ -148,10 +147,9 @@ public class ResultActivity extends AppCompatActivity {
     public int odScore(String [] ordinary){
         int sum = 0;
 
-        for(int i = 0; i < ordinary.length; i++) {
-            String a = ordinary[i];
-            if(a != null){
-                switch (a) {
+        for(String i : ordinary) {
+            if(i != null){
+                switch (i) {
                     case "A1":
                         sum += 60;
                         break;
@@ -195,10 +193,9 @@ public class ResultActivity extends AppCompatActivity {
 
     public int hiScore(String [] hi){
         int sum = 0;
-        for(int i = 0; i < hi.length; i++){
-            String a = hi[i];
-            if(a != null){
-                switch (a) {
+        for(String i : hi){
+            if(i != null){
+                switch (i) {
                     case "A1":
                         sum += 100;
                         break;

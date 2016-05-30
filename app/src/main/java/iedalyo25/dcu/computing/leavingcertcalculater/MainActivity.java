@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle("Enter Top 6 Subjects");
         setSupportActionBar(toolbar);
 
         btnConSub = (Button) findViewById(R.id.btnConSub);

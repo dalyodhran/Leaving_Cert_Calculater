@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Leaving Cert Calculate</string>
+    <string name="app_name">Leaving Cert Calculator</string>
     <string name="action_settings">Settings</string>
     <string-array name="Level">
         <item>Select Grade</item>
@@ -75,9 +75,9 @@
         <item>Swedish</item>
         <item>Technology</item>
     </string-array>
-    <string name="title_activity_level">LevelActivity</string>
-    <string name="title_activity_grade">GradeActivity</string>
-    <string name="title_activity_result">ResultActivity</string>
+    <string name="title_activity_level">Level Activity</string>
+    <string name="title_activity_grade">Grade Activity</string>
+    <string name="title_activity_result">Result Activity</string>
     <string name="tvSubInfo">Enter Top 6 Subjects</string>
     <string name="btnConSub">Confirm</string>
     <string name="btnConLevel">Confirm</string>
